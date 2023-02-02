@@ -1,0 +1,22 @@
+.header-main {
+  padding: 0.5rem 1rem;
+  background-color: var(--background-color);
+  box-shadow: 0 3px 6px var(--global-shadow-color);
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo-box {
+  padding: 0.5rem 1rem;
+  background-color: #23232311;
+  border-radius: 0.375rem;
+}
+
+.sun-emoji {
+  position: absolute;
+  left: -2rem;
+}

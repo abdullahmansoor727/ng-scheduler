@@ -1,0 +1,13 @@
+<div class="header-main">
+  <div class="header-container">
+    <div class="logo-box">
+      Scheduler
+    </div>
+    <div class="form-check form-switch ms-auto position-relative">
+      <label title="Light Mode" for="darkMode" class="sun-emoji">☀️</label>
+      <input class="form-check-input" type="checkbox" id="darkMode" [checked]="themeService.mode == themeMode.DARK"
+        (change)="themeService.changeTheme(themeService.mode == themeMode.LIGHT ? themeMode.DARK: themeMode.LIGHT)">
+      <label title="Dark Mode" class="form-check-label" for="darkMode">🌙</label>
+    </div>
+  </div>
+</div>
