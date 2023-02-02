@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/layout/header/header.component';
-import { FooterComponent } from './components/layout/footer/footer.component';
+import { HeaderComponent } from './components/organisms/layout/header/header.component';
+import { FooterComponent } from './components/organisms/layout/footer/footer.component';
 import { ShiftSchedulerComponent } from './pages/shift-scheduler/shift-scheduler.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
