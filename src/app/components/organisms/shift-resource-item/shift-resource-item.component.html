@@ -1,0 +1,6 @@
+<app-card>
+  <div class="d-flex flex-row justify-content-between align-items-center">
+    {{data?.name}}
+    <i class="fas fa-trash" [ngStyle]="{cursor: 'pointer'}" (click)="deleteResource()"></i>
+  </div>
+</app-card>

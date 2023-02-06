@@ -1,0 +1,10 @@
+<h4 class="m-0">{{getEntityName()}}</h4>
+<div *ngIf="resources.length === 0; else elseBlock" class="empty-list">
+  <img src="../../../../../assets/no-data.svg" alt="No data" width="100">
+  <p>No {{getEntityName().toLowerCase()}} added yet!</p>
+</div>
+<ng-template #elseBlock>
+  <div class="resources-list">
+    <app-shift-resource-item *ngFor="let resource of resources" [data]="resource"></app-shift-resource-item>
+  </div>
+</ng-template>

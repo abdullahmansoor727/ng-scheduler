@@ -1,0 +1,8 @@
+<h4 class="m-0">Your Schedule</h4>
+<div *ngIf="!schedules.length; else elseBlock" class="empty-list">
+  <img src="../../../../../assets/schedule.svg" alt="No data" width="100">
+  <p>No schedule generated yet!</p>
+</div>
+<ng-template #elseBlock>
+  <p>Generated 3 possible schedules</p>
+</ng-template>

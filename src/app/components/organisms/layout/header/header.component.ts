@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemeMode } from 'src/app/constants/theme';
-import { ThemeService } from 'src/app/services/theme.service';
+import { ThemeService } from 'src/app/services/theme/theme.service';
 // ThemeMode;
 @Component({
   selector: 'app-header',

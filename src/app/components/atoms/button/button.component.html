@@ -1,1 +1,5 @@
-<p>button works!</p>
+<button app-button [style.padding]="padding" [style.backgroundColor]="color" [type]="htmlType"
+  [class]="variant + '-btn ' + btnClass" [style]=" style" [disabled]="disabled">
+  <app-loader *ngIf="loading" [variant]="variant" [@myAnimation]></app-loader>
+  <ng-content></ng-content>
+</button>
