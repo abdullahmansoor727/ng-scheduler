@@ -9,21 +9,14 @@ import { ResourceService } from 'src/app/services/resource/resource.service';
 })
 export class ResourceListComponent implements OnInit {
   @Input() entity?: string;
-  resources: IShiftResource[] = this.resourceService.resources;
+  resources: IShiftResource[] = [];
 
   constructor(private resourceService: ResourceService) {}
 
-  getEntityName() {
-    return this.entity
-      ? this.entity
-          .split('')
-          .map((letter, index) => {
-            if (!index) return letter.toUpperCase();
-            return letter;
-          })
-          .join('')
-      : 'Resources';
+  ngOnInit(): void {
+    this.resources = this.resourceService.resources;
+    this.resourceService.resourcesUpdated.subscribe((resources) => {
+      this.resources = resources;
+    });
   }
-
-  ngOnInit(): void {}
 }

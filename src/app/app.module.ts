@@ -22,6 +22,8 @@ import { ShiftResourceCtaComponent } from './components/organisms/shift-resource
 import { LoaderComponent } from './components/atoms/loader/loader.component';
 import { ScheduleOutputComponent } from './components/organisms/schedule-output/schedule-output.component';
 import { ResourceService } from './services/resource/resource.service';
+import { DayOfWeekPipe } from './pipes/dateTime/day-of-week.pipe';
+import { SortWeekPipe } from './pipes/dateTime/sort-week.pipe';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -44,6 +46,8 @@ const appRoutes: Routes = [
     ShiftResourceCtaComponent,
     LoaderComponent,
     ScheduleOutputComponent,
+    DayOfWeekPipe,
+    SortWeekPipe,
   ],
   imports: [
     BrowserModule,

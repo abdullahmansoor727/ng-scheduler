@@ -1,7 +1,7 @@
-<h4 class="m-0">{{getEntityName()}}</h4>
+<h4 class="m-0">{{entity ?? 'Resources' | titlecase}}</h4>
 <div *ngIf="resources.length === 0; else elseBlock" class="empty-list">
   <img src="../../../../../assets/no-data.svg" alt="No data" width="100">
-  <p>No {{getEntityName().toLowerCase()}} added yet!</p>
+  <p>No {{entity ?? 'resources'}} added yet!</p>
 </div>
 <ng-template #elseBlock>
   <div class="resources-list">

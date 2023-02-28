@@ -14,7 +14,7 @@ export class ShiftResourceCtaComponent implements OnInit {
   addResource() {
     this.resourceService.createResource({
       id: Math.random() * 10,
-      name: 'John Doe',
+      name: `John Doe ${this.resourceService.resources.length + 1}`,
       availability: {
         mon: {
           day: true,

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { DaysOfTheWeek } from 'src/app/constants/global';
 import { IShiftResource } from 'src/app/models/resource';
 import { ResourceService } from 'src/app/services/resource/resource.service';
 
@@ -16,5 +17,9 @@ export class ShiftResourceItemComponent implements OnInit {
   deleteResource() {
     console.log('deleteResource');
     this.resourceService.deleteResource(this.data?.id!);
+  }
+
+  getDayOfWeek(index: string) {
+    return DaysOfTheWeek[index as keyof typeof DaysOfTheWeek];
   }
 }
